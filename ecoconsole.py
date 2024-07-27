@@ -84,8 +84,8 @@ class ClimateConsoleApp:
                 print("\nInvalid choice. Please enter a number between 1 and 5.\n")
 
             # Pause for 3 seconds before showing the menu again
-            time.sleep(3)
-## Cletus
+            time.sleep(3)
+
     @staticmethod
     def donate_or_advertise():
         print("\nWould you like to:")
@@ -114,4 +114,8 @@ class ClimateConsoleApp:
             print("\nInvalid choice. Please enter 1 or 2.\n")
 
         # Pause for 3 seconds before showing the menu again
-        time.sleep(3)         
+        time.sleep(3)
+
+if __name__ == "__main__":
+    app = ClimateConsoleApp()
+    app.main()
