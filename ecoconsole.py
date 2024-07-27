@@ -85,3 +85,33 @@ class ClimateConsoleApp:
 
             # Pause for 3 seconds before showing the menu again
             time.sleep(3)
+## Cletus
+    @staticmethod
+    def donate_or_advertise():
+        print("\nWould you like to:")
+        print("1. Donate")
+        print("2. Watch an Advertisement")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            print("\nTo donate, please use this number: +250793246060")
+        elif choice == '2':
+            ads = [
+                "https://youtu.be/bzlLVpWTyvU?si=zPUdpZdp_40w1SG0",
+                "https://youtu.be/X2waKapmfCY?si=6G57cgS8YUBw-8z3",
+                "https://youtu.be/ZbM4arzTdug?si=ZvpKJpqVh_ULuh2T",
+                "https://youtu.be/gZ9cOKVkmfg?si=H0PcSiWv75naHJ1s",
+                "https://youtu.be/TI-fLK-1km4?si=AMrxyd5IAAdVT_dO"
+            ]
+
+            ad_link = random.choice(ads)
+            print(f"\nWatch this advertisement: {ad_link}")
+
+            # Open the advertisement link in the default web browser
+            webbrowser.open(ad_link)
+        else:
+            print("\nInvalid choice. Please enter 1 or 2.\n")
+
+        # Pause for 3 seconds before showing the menu again
+        time.sleep(3)         
