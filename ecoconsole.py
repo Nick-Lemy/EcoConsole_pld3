@@ -15,7 +15,7 @@ class CarbonFootprint:
     CO2_PER_THERM = 5.3  # kg CO2 per therm
     CO2_PER_MILE = 0.404  # kg CO2 per mile
 
-    def _init_(self, electricity, gas, car_miles):
+    def __init__(self, electricity, gas, car_miles):
         self.electricity = electricity
         self.gas = gas
         self.car_miles = car_miles
