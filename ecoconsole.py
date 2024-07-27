@@ -25,4 +25,16 @@ class CarbonFootprint:
         gas_footprint = self.gas * self.CO2_PER_THERM
         car_footprint = self.car_miles * self.CO2_PER_MILE
         total_footprint = electricity_footprint + gas_footprint + car_footprint
-        return total_footprint
+        return total_footprint
+
+class ClimateAdvice:
+    @staticmethod
+    def give(footprint):
+        print("\n** Climate Advice **")
+        if footprint < 100:
+            print("Great job! Your carbon footprint is low. Keep up the good work!")
+        elif 100 <= footprint < 500:
+            print("You're doing okay, but there's room for improvement. Consider reducing your car travel or using energy-efficient appliances.")
+        else:
+            print("Your carbon footprint is high. Try to reduce your energy consumption and car travel. Consider renewable energy sources and more sustainable practices.")
+        print("********\n")
