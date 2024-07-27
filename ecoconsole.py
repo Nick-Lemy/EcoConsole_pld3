@@ -38,3 +38,25 @@ class ClimateAdvice:
         else:
             print("Your carbon footprint is high. Try to reduce your energy consumption and car travel. Consider renewable energy sources and more sustainable practices.")
         print("********\n")
+
+class ClimateConsoleApp:
+    @staticmethod
+    def get_carbon_footprint_inputs():
+        electricity = float(input("\nEnter your monthly electricity usage (kWh): "))
+        gas = float(input("Enter your monthly gas usage (therms): "))
+        car_miles = float(input("Enter your monthly car travel (miles): "))
+        return electricity, gas, car_miles
+
+    def main(self):
+        print("\n====================================")
+        print("\033[1;34m Welcome to the Climate Console App \033[0m")
+        print("\033[1;32m====================================\033[0m")
+
+        while True:
+            print("\n--------- Menu ---------")
+            print("1. Receive Notification")
+            print("2. Calculate Carbon Footprint")
+            print("3. Get Climate Advice")
+            print("4. Donate or Watch an Advertisement")
+            print("5. Exit")
+            print("------------------------\n")        
