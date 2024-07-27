@@ -59,4 +59,29 @@ class ClimateConsoleApp:
             print("3. Get Climate Advice")
             print("4. Donate or Watch an Advertisement")
             print("5. Exit")
-            print("------------------------\n")        
+            print("------------------------\n")
+            choice = input("Enter your choice: ")
+
+            if choice == '1':
+                Notification.send("Remember to turn off lights when not in use!")
+            elif choice == '2':
+                electricity, gas, car_miles = self.get_carbon_footprint_inputs()
+                carbon_footprint = CarbonFootprint(electricity, gas, car_miles)
+                footprint = carbon_footprint.calculate()
+                print(f"\nYour total monthly carbon footprint is: {footprint:.2f} kg CO2")
+                Notification.send(f"Your carbon footprint has been calculated: {footprint:.2f} kg CO2")
+            elif choice == '3':
+                electricity, gas, car_miles = self.get_carbon_footprint_inputs()
+                carbon_footprint = CarbonFootprint(electricity, gas, car_miles)
+                footprint = carbon_footprint.calculate()
+                ClimateAdvice.give(footprint)
+            elif choice == '4':
+                self.donate_or_advertise()
+            elif choice == '5':
+                print("\nExiting the Climate Console App. Goodbye!\n")
+                break
+            else:
+                print("\nInvalid choice. Please enter a number between 1 and 5.\n")
+
+            # Pause for 3 seconds before showing the menu again
+            time.sleep(3)
